@@ -16,7 +16,15 @@ export default function Dashboard() {
           <div key={s._id} className="p-4 border rounded shadow">
             <h3 className="text-lg font-semibold">{s.title}</h3>
             <p className="text-sm text-gray-500">Tags: {s.tags.join(', ')}</p>
-            <a href={s.json_file_url} className="text-blue-600 underline" target="_blank">View JSON</a>
+           <a
+  href={s.json_file_url}
+  className="text-blue-600 underline"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View JSON
+</a>
+
           </div>
         ))}
       </div>

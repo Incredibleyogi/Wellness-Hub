@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:4000', // ✅ Replace with your actual Render backend URL
+  baseURL: import.meta.env.VITE_API_BASE_URL,
 });
+
 
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem('token');
