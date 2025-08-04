@@ -38,25 +38,7 @@ Replace the URL with your Render backend URL when deploying:
 VITE_API_BASE_URL=https://wellness-hub-b.onrender.com
 Run frontend locally:
 npm run dev
-🧩 Folder Structure
-Wellness-Hub/
-│
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   └── server.js
-│
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── components/
-│   │   ├── utils/
-│   │   └── App.jsx
-│   └── vite.config.js
-│
-└── README.md🧘‍♀️ Wellness Hub
+
 
 
 🔐 Auth Routes
