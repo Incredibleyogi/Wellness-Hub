@@ -9,8 +9,11 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: '*', // or your Netlify domain for stricter security
+  origin: 'https://wellness-h.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // only if you use cookies or auth headers
 }));
+
 app.use(express.json());
 app.use('/auth', authRoutes);
 app.use('/sessions', sessionRoutes);
