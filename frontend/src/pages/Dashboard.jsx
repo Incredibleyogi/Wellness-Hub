@@ -4,9 +4,12 @@ import API from '../utils/api';
 export default function Dashboard() {
   const [sessions, setSessions] = useState([]);
 
-  useEffect(() => {
-    API.get('/sessions').then(res => setSessions(res.data));
-  }, []);
+useEffect(() => {
+  API.get('/sessions/my/published') // Only fetch sessions of the logged-in user
+    .then(res => setSessions(res.data))
+    .catch(err => console.error('Error fetching sessions:', err));
+}, []);
+
 
   return (
     <div className="p-6">
